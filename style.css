@@ -1,0 +1,764 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(2, 2, 2);
+}
+
+.mainParentClassContainer {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+@media (min-width: 1900px) {
+    .mainParentClassContainer {
+        width: 100vw;
+        min-width: 100vw; 
+    }
+}
+
+@media (max-width: 902px) {
+    .mainParentClassContainer {
+        height: auto; 
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .mainParentClassContainer {
+        min-height: 40vh !important; 
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainParentClassContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 2; 
+    pointer-events: none; 
+}
+
+.headerContainer{
+    max-width: 85vw;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.navContainer {
+    position:relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.langTextClass {
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    height: 2.5rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signInButtonClass {
+    height: 2.5rem;
+    width: 7rem;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+.signInButtonClass:hover{
+    cursor: pointer;
+    background-color:rgb(129, 4, 4);
+}
+
+.signInButtonClass button {
+    font-style: bold;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logoContainer img{
+    height: 2.9rem;
+}
+
+@media (max-width: 550px) {
+    .langTextClass {
+        font-size: 0.8rem;
+        height: 1.7rem;
+        width: 4rem;
+    }
+    .logoContainer img {
+        height: 1.8rem;
+    }
+    .signInButtonClass {
+        font-size: 0.8rem;
+        height: 1.7rem;
+        width: 4rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .langTextClass {
+        font-size: 0.5rem;
+        height: 1.2rem;
+        width: 2.8rem;
+    }
+    .logoContainer img {
+        height: 1.1rem;
+    }
+    .signInButtonClass {
+        font-size: 0.5rem;
+        height: 1.3rem;
+        width: 2.8rem;
+    }
+}
+
+.textContainerMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; 
+    z-index: 11;
+    max-width: 90vw;
+    margin: 25vh auto; 
+    padding: 1rem 1rem; 
+    gap: 1rem;
+}
+
+.firstContentClass {
+    font-size: 3.5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.secondContentClass {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.thirdContentClass {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width:550px) {
+    .firstContentClass {
+        font-size: 2rem;
+    }
+    .secondContentClass {
+        font-size: 0.8rem;
+    }
+    .thirdContentClass {
+        font-size: 0.8rem;
+    }
+}
+
+.fourthContentClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+}
+
+input[type="text"] {
+    width: 30vw;
+    padding: 0.75rem;
+    border: 1px solid white;
+    background-color: rgba(50, 50, 50, 0.7);
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 70vw; 
+        max-width: 400px; 
+        padding: 0.65rem; 
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 550px) {
+    input[type="text"] {
+        width: 80vw;
+        max-width: 350px; 
+        padding: 0.5rem;
+        font-size: 0.8rem; 
+    }
+}
+
+input::placeholder {
+    color: rgba(181, 175, 175, 0.9);
+}
+
+.getStartedButton {
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+}
+
+.getStartedButton button {
+    width: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.getStartedButton button:hover {
+    background-color: darkred;
+}
+
+@media (max-width:238px) {
+    .getStartedButton button {    
+        height: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fourthContentClass {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 70vw;
+        margin-bottom: 0.5rem;
+    }
+
+    .getStartedButton {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.gapClass {
+    height: 6px;
+    width: 100vw;
+    background-color: rgb(167, 162, 162);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+.trendingText {
+    font-size: 1.9rem;
+    color: white;
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; 
+    width: 100%; 
+    padding-left: 0; 
+}
+
+.gapClass {
+    height: 6px;
+    width: 100vw;
+    background-color: rgb(167, 162, 162);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    margin: auto; 
+}
+
+
+.GridClass img {
+    border-radius: 10px;
+}
+
+.mainSectionClass {
+    width: 83vw; 
+    margin: auto;
+    padding: 1.5rem;
+    display: flex; 
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.imageGridClass {
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 83vw; 
+    margin: auto;
+}
+
+@media (max-width: 360px) {
+    .imageGridClass {
+        width: 90vw;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .GridClass img {
+        width: 100%;
+        height: auto; 
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw; 
+        margin: auto; 
+    }
+}
+
+.GridClass:hover {
+    scale: 1.05;
+    transition-duration: 400ms;
+}
+
+
+.moreReasonTextClass {
+    width: 83vw;
+    font-size: 1.9rem;
+    color: white;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 470px) {
+    .moreReasonTextClass {
+        font-size: 1.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 200px) {
+    .moreReasonTextClass {
+        font-size: 0.8rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+}
+
+.cardMainContainer {
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 83vw;
+    margin: auto;
+    width: auto;
+}
+
+.cardContainer {
+    background-color: #530327;
+    background-image: linear-gradient(117deg, #42031f 0%, #030528 100%);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: calc(25% - 2rem);
+    box-sizing: border-box;
+    min-height: 17rem;  
+    overflow-x: hidden;  
+    gap: 2rem;
+    min-height: 276px;
+    min-width: 197px;
+    
+}
+
+.firstSpan {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 0.5rem; 
+}
+
+.secondSpan {
+    display: block;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 330px) {
+    .cardMainContainer {
+        width: 90vw;
+        align-content: start;
+        justify-content: start;
+        padding: none;
+    }
+
+}
+
+@media (max-width: 345px) {
+    .cardMainContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        width: 90vw; 
+        margin: 0 auto; 
+        padding: 0; 
+    }
+
+    .cardContainer {
+        width: 100%; 
+        max-width: 90vw; 
+        margin: 0 auto; 
+    }
+}
+
+
+.faqStatement {
+    font-size: 1.9rem;
+    color: white;
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; 
+    width: 100%; 
+    padding-left: 0; 
+}
+
+@media (max-width:510px) {
+    .faqStatement {
+        font-size: 1.1rem;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+}
+
+.secondSection {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    border: none;
+    min-height: 5rem; 
+    margin: auto;
+}
+
+.frequentQuestion {
+    border: none;
+    background-color: rgb(75, 69, 69);
+    border-radius: 2px;
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 1rem; 
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.firstClass p{
+    color: rgb(243, 217, 217);
+    font-size: 2.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.secondClass p{
+    color: rgb(243, 217, 217);
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+@media (max-width:816px) {
+    .firstClass p{
+        color: rgb(243, 217, 217);
+        font-size: 1.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+    
+    .secondClass p{
+        color: rgb(243, 217, 217);
+        font-size: 3rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:527px) {
+    .firstClass p{
+        color: rgb(243, 217, 217);
+        font-size: 1.1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+    
+    .secondClass p{
+        color: rgb(243, 217, 217);
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+@media (max-width:300px) {
+    .firstClass p{
+        color: rgb(243, 217, 217);
+        font-size: 0.8rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+    
+    .secondClass p{
+        color: rgb(243, 217, 217);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .frequentQuestion{
+        height: 2.5rem;
+    }
+}
+
+
+.footerClass {
+    padding-top: 2rem;
+    max-width: 80vw;
+    margin: auto;
+    height:450px;
+}
+
+.textContainerClass {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: rgb(189, 183, 183);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:330px) {
+    .textContainerClass {
+        font-size: 1.3rem;
+    }
+}
+
+.inputButtonClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.secondButtonClass button {
+    width: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.secondButtonClass button:hover {
+    background-color: rgb(97, 4, 4);
+}
+
+@media (max-width:770px) {
+    .footerClass {
+        height: 580px;
+    }
+    .inputButtonClass {
+        flex-direction: column;
+    }
+    .secondButtonClass button {
+        font-size: 0.6rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.support {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 2rem;
+}
+
+.support p a {
+    color: rgb(124, 152, 228);
+}
+
+.shortcut {
+    width: 70vw;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.firstShortcutClass {
+    display: flex;
+    justify-content:space-between ;
+}
+
+.secondShortcut {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thirdShortcut {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourthShortcut {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shortcut a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (max-width:900px) {
+    .shortcut a{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:540px) {
+    .shortcut {
+        flex-direction: row;
+    }
+    .shortcut {
+        gap: 10px;
+    }
+    .firstShortcutClass {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content:space-between ;
+    }
+    
+    .secondShortcut {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .thirdShortcut {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .fourthShortcut {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.firstShortcutClass p {
+    text-align: left;
+}
+
+.pClass p {
+    text-align: left;
+}
+
+.finalFooter {
+    padding-top: 2rem;
+    margin: auto;
+    width: 80vw;
+}
+
+.finalFooter .finalButton button {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgb(72, 66, 66);
+    height: 3rem;
+    width: 10rem;
+    border-radius: 3px;
+}
+
+.finalFooter p {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+@media (max-width:330px){
+    .finalFooter p {
+        font-size: 1.2rem;
+    }
+}
